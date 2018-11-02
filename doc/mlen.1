@@ -1,0 +1,63 @@
+.\" Manpage for mlen
+.\" Contact:  hendrie.james@gmail.com
+.TH man 1 "November 2018" "mlen version 0.96" "mlen manual page"
+.SH NAME
+mlen \- A bash script that tallies media runtime
+
+.SH SYNPOSIS
+mlen FILE[s] or DIRECTORY
+
+.SH DESCRIPTION
+mlen is a bash script that uses ffprobe to determined the total
+playtime of a given number of media files.
+
+.SH OPTIONS
+-h or --help
+    Print help and exit
+
+-V or --version
+    Print version and author information
+
+
+.SH EXAMPLES
+mlen song.mp3
+    Prints out the runtime of the song
+
+mlen song1.wav song2.wav
+    Prints total runtime of both the given songs
+
+mlen *.mp3
+    Prints out total runtime of all mp3s in the present working directory
+
+mlen PLAYLIST.m3u
+    Reads the playlist and prints the total runtime of the files on it,
+    assuming they can be found
+
+mlen /home/whatever/media
+    Prints the total runtime of all media files in the above directory,
+    recursively
+
+.SH SUPPORTED EXTENSIONS
+Audio
+  mp3 ogg oga m4a wav wma 
+
+Video
+  mp4 avi webm mpg flv wmv 
+
+Playlist
+  m3u pls 
+
+
+.SH RESTRICTIONS
+It's not the fastest script on the block, so if you're working through a ton of
+files, be prepared to wait a bit.  It also requires that filenames contain the
+common extensions (mp3, mp4, etc.) to work.
+
+.SH COPYRIGHT
+Copyright \(co 2018 James Hendrie, licensed under the zlib License.  See
+LICENSE.txt for details.  This is free, open-source software.  You are free to
+modify and redistribute it.  There is NO WARRANTY, to the extent permitted by
+law.
+
+.SH AUTHORS
+Written by James Hendrie (hendrie.james@gmail.com).

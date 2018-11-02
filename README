@@ -1,0 +1,72 @@
+================================================================================
+    mlen.sh     |   James Hendrie (hendrie.james@gmail.com)
+    2018-11-02  |   README file
+================================================================================
+
+Usage:
+    mlen FILE[s] or DIRECTORY
+
+
+Description:
+    mlen is a bash script that uses ffprobe to determined the total
+    playtime of a given number of media files.
+
+
+Requirements:
+    You'll need ffprobe (ffmpeg), bc and printf.  You probably already have
+    these.
+
+
+Installation:
+    You don't really need to install this (it's a shell script), but it makes
+    things a little easier if you do.  To do so, as superuser and within the
+    root directory to which you've extracted the archive, type 'make install'.
+
+
+Uninstallation:
+    Similar to the above, except you type 'make uninstall' instead.
+
+
+Arguments:
+    -h or --help:
+        Print a help screen
+
+    -V or --version:
+
+
+Examples:
+    mlen song.mp3
+        Prints out the runtime of the song
+
+    mlen song1.wav song2.wav
+        Prints total runtime of both the given songs
+
+    mlen *.mp3
+        Prints out total runtime of all mp3s in the present working directory
+
+    mlen PLAYLIST.m3u
+        Reads the playlist and prints the total runtime of the files on it,
+        assuming they can be found
+
+    mlen /home/whatever/media
+        Prints the total runtime of all media files in the above directory,
+        recursively
+
+
+Supported extensions:
+    Audio
+      mp3 ogg oga m4a wav wma 
+
+    Video
+      mp4 avi webm mpg flv wmv 
+
+    Playlist
+      m3u pls 
+
+
+This script is licensed under the zlib License.  Check out LICENSE.txt for more
+info.
+
+
+AUTHOR
+    James Hendrie <hendrie.james@gmail.com>
