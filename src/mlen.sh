@@ -12,7 +12,7 @@ VERSION="0.96"
 ##  Make sure we have the programs we need
 required=('ffprobe' 'bc' 'printf')
 for prog in "${required[@]}"; do
-    if [[ $(which "$prog" &> /dev/null) -ne 0 ]]; then
+    if [[ "$(which "$prog" &> /dev/null; echo $?)" -ne 0 ]]; then
         echo "ERROR:  '$prog' required, but not found.  Aborting." 1>&2
         exit 1
     fi
