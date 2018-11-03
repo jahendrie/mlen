@@ -1,6 +1,6 @@
 ================================================================================
     mlen.sh     |   James Hendrie (hendrie.james@gmail.com)
-    2018-11-02  |   README file
+    2018-11-03  |   README file
 ================================================================================
 
 Usage:
@@ -32,6 +32,21 @@ Arguments:
         Print a help screen
 
     -V or --version:
+
+    -v
+        Verbose output
+
+    -s
+        Print totals as seconds, with milliseconds
+
+    -S
+        Print totals as seconds, without milliseconds
+
+    -n
+        Print total number of files tallied (default)
+
+    -N
+        Do NOT print number of files tallied
 
 
 Examples:

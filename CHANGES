@@ -1,1 +1,3 @@
 2018-11-02  0.96    Initial release
+
+2018-11-03  0.98    Added better options support (getopt)
