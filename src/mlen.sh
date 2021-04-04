@@ -1,12 +1,12 @@
 #!/bin/bash
 #===============================================================================
-#   mlen.sh     |   version 0.98    |   zlib license    |   2018-11-03
+#   mlen.sh     |   version 0.99    |   zlib license    |   2021-04-03
 #   James Hendrie                   |   hendrie.james@gmail.com
 #
 #   This script will calculate the media playtime of a given file(s), directory
 #   or playlist (m3u or pls).
 #===============================================================================
-VERSION="0.98"
+VERSION="0.99"
 
 
 ##  Make sure we have the programs we need
@@ -33,8 +33,8 @@ fi
 
 ##  Arrays of formats we give a shit about
 ##  Reduce the size of these to speed up the script
-audioFormats=('mp3' 'ogg' 'oga' 'm4a' 'wav' 'wma')
-videoFormats=('mp4' 'avi' 'webm' 'mpg' 'flv' 'wmv')
+audioFormats=('mp3' 'ogg' 'oga' 'm4a' 'wav' 'wma' 'opus')
+videoFormats=('mp4' 'avi' 'webm' 'mpg' 'flv' 'wmv' 'mkv')
 playlistFormats=('m3u' 'pls')
 
 
